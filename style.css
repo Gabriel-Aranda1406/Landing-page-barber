@@ -292,6 +292,10 @@ i {
   color: #FFF;
 }
 
+.texto-footer {
+  text-align: center;
+}
+
 .btn-whatsapp {
   position: fixed;
   bottom: 14px;
