@@ -26,7 +26,7 @@ i {
 
 .header-icons a:hover i {
   animation: translateY 0.8s infinite alternate;
-  color: #d34040;
+  color: rgb(223, 182, 86);
 }
 
 @keyframes translateY {
@@ -38,7 +38,9 @@ i {
   }
 }
 .header-button {
-  border: 1px solid #FFF;
+  font-family: "Alexandria", sans-serif;
+  font-weight: 800;
+  border: 2px solid rgb(223, 182, 86);
   padding: 8px 24px;
   border-radius: 4px;
   color: #FFF;
@@ -47,8 +49,8 @@ i {
 }
 
 .header-button:hover {
-  border: 1px solid #d34040;
-  background-color: #d34040;
+  border: 1px solid rgb(223, 182, 86);
+  background-color: rgb(7, 28, 59);
 }
 
 .header-logo {
@@ -56,6 +58,10 @@ i {
   align-items: center;
   justify-content: center;
   margin-top: 14px;
+}
+
+.header-logo img {
+  max-width: 150px;
 }
 
 @media screen and (max-width: 768px) {
@@ -91,7 +97,7 @@ i {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/bg.svg");
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.596), #14213d), url("../assets/bg_2.jpeg");
   left: 0;
   top: 0;
   width: 100%;
@@ -113,29 +119,42 @@ i {
   padding: 14px;
 }
 .hero h1 {
+  margin-top: -200px;
   text-align: center;
   line-height: 150%;
   max-width: 940px;
-  font-size: 46px;
+  font-size: 100px;
 }
 .hero p {
+  margin-top: 0px;
+  font-weight: 800;
   text-align: center;
   margin: 14px 0;
+}
+.hero span {
+  margin-top: -80px;
+  color: #dfb656;
+  display: block;
+  font-family: "Antonio", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
 }
 
 .button-contact {
   padding: 14px 28px;
   color: #FFF;
-  background-color: #d94149;
-  border: 0;
+  background-color: transparent;
+  border: 2px solid #dfb656;
+  font-family: "Alexandria", sans-serif;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 800;
   margin: 14px 0;
   border-radius: 8px;
 }
 
 .button-contact:hover {
   animation: scaleButton 0.8s alternate infinite;
+  background-color: rgb(7, 28, 59);
 }
 
 @keyframes scaleButton {
@@ -151,21 +170,45 @@ i {
     min-width: 60hv;
   }
   .hero h1 {
-    font-size: 34px;
+    margin-top: -200px;
+    font-size: 64px;
     padding: 0 14px;
     width: 100%;
   }
   .hero p {
     font-size: 14px;
   }
+  .hero span {
+    margin-top: -10px;
+    font-size: 34px;
+  }
 }
 @media screen and (max-width: 480px) {
+  .hero {
+    margin-top: -20px;
+  }
   .hero h1 {
+    font-size: 80px;
+  }
+  .hero span {
+    margin-top: -60px;
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .hero {
+    margin-top: -60px;
+  }
+  .hero h1 {
+    margin-top: 20px;
+    font-size: 80px;
+  }
+  .hero span {
     font-size: 24px;
   }
 }
 .about {
-  background-color: #06121e;
+  background-color: #14213d;
   overflow: hidden;
   color: #FFF;
 }
@@ -179,6 +222,7 @@ i {
 }
 .about-content img {
   max-width: 570px;
+  border-radius: 20px;
 }
 
 .about-content div {
@@ -190,8 +234,12 @@ i {
   margin-bottom: 24px;
 }
 .about-description p {
+  font-weight: 800;
   margin-bottom: 14px;
   line-height: 150%;
+}
+.about-description span {
+  color: #dfb656;
 }
 
 @media screen and (max-width: 768px) {
@@ -200,8 +248,8 @@ i {
   }
 }
 .services {
-  background-color: #FFF;
-  color: #232224;
+  background-color: #aaa9a9;
+  color: rgb(7, 28, 59);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -213,6 +261,7 @@ i {
   text-transform: uppercase;
   text-align: center;
   font-size: 38px;
+  font-weight: 800;
   margin-bottom: 14px;
 }
 
@@ -220,23 +269,26 @@ i {
   line-height: 150%;
   margin-bottom: 14px;
   text-align: center;
+  font-weight: 800;
   max-width: 780px;
 }
 
 .haircuts {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
   padding: 0 44px 34px 44px;
 }
 
 .haircut {
-  flex: 1;
+  flex: -1;
   display: flex;
   flex-direction: column;
+  border: 4px solid rgb(223, 182, 86);
   background-color: #FFF;
   border-radius: 8px;
-  box-shadow: 0px -1px 17x -4px rgba(0, 0, 0, 0.45);
+  box-shadow: 5px -1px 0px 5px rgb(7, 28, 59);
   overflow: hidden;
 }
 .haircut img {
@@ -255,17 +307,21 @@ i {
   display: flex;
   justify-content: space-between;
   padding: 14px;
-  background-color: #FFF;
+  background-color: #E6E6E6;
   z-index: 99;
 }
 
 .haircut-info button {
   color: #FFF;
-  background-color: #d94149;
+  background-color: rgb(7, 28, 59);
   padding: 4px 8px;
   border-radius: 4px;
-  border: 0;
-  cursor: default;
+  border: 2px solid rgb(223, 182, 86);
+  cursor: pointer;
+}
+
+.haircut-info a {
+  color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -286,6 +342,10 @@ i {
   color: #FFF;
 }
 
+.footer img {
+  max-width: 84px;
+}
+
 .footer-icons {
   display: flex;
   gap: 8px;
@@ -294,6 +354,22 @@ i {
 
 .texto-footer {
   text-align: center;
+  text-decoration: none;
+}
+
+.texto-footer span {
+  color: #dfb656;
+}
+
+.texto-footer button {
+  background-color: #14213d;
+  color: white;
+  padding: 5px;
+  margin: auto;
+}
+
+.texto-footer a {
+  color: white;
 }
 
 .btn-whatsapp {
@@ -336,15 +412,20 @@ i {
   }
 }
 body {
-  font-family: "Sora", sans-serif;
+  font-family: "Alexandria", sans-serif;
   width: 100%;
   height: 100vh;
   position: relative;
   background-color: #06121e;
 }
 
+p {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 500;
+}
+
 button {
-  font-family: "Sora", sans-serif;
+  font-family: "Alexandria", sans-serif;
   cursor: pointer;
 }
 

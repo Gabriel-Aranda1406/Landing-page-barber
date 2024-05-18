@@ -20,7 +20,7 @@ i {
 .header-icons a:hover{
     i{
         animation: translateY 0.8s infinite alternate;
-        color: $red-light;
+        color: rgb(223,182,86);;
     }
 }
 
@@ -34,7 +34,9 @@ i {
 }
 
 .header-button {
-    border: 1px solid $white-normal;
+    font-family: "Alexandria", sans-serif;
+    font-weight: 800;
+    border: 2px solid rgb(223,182,86);;
     padding: 8px 24px;
     border-radius: 4px;
     color: $white-normal;
@@ -43,8 +45,8 @@ i {
 }
 
 .header-button:hover {
-    border: 1px solid $red-light;
-    background-color: $red-light;
+    border: 1px solid rgb(223,182,86);
+    background-color: rgb(7,28,59);
 }
 
 .header-logo {
@@ -52,6 +54,10 @@ i {
     align-items: center;
     justify-content: center;
     margin-top: 14px;
+}
+
+.header-logo img{
+    max-width: 150px;
 }
 
 @media screen and (max-width: 768px) {

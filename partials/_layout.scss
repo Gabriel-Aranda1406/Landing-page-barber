@@ -11,7 +11,7 @@
     content: '';
     display: block;
     position: absolute;
-    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/bg.svg");
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.596), #14213d), url("../assets/bg_2.jpeg");
     left: 0;
     top: 0;
     width: 100%;
@@ -27,7 +27,6 @@
   .hero{
     color: $white-normal;
     min-height: 80vh;
-  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,31 +34,45 @@
     padding: 14px;
   
     h1{
+      margin-top: -200px;
       text-align: center;
       line-height: 150%;
       max-width: 940px;
-      font-size: 46px;
+      font-size: 100px;
     }
-  
+
     p{
+      margin-top: 0px;
+      font-weight: 800;
       text-align: center;
       margin: 14px 0;
+    }
+
+    span{
+      margin-top: -80px;
+      color: #dfb656;
+      display: block;
+      font-family: "Antonio", sans-serif;
+      font-size: 40px;
+      font-weight: 400;
     }
   }
   
   .button-contact{
     padding: 14px 28px;
     color: $white-normal;
-    background-color: $red-normal;
-    border: 0;
+    background-color: transparent;
+    border: 2px solid #dfb656;
+    font-family: "Alexandria", sans-serif;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 800;
     margin: 14px 0;
     border-radius: 8px;
   }
   
   .button-contact:hover{
     animation: scaleButton 0.8s alternate infinite;
+    background-color: rgb(7,28,59);
   }
   
   @keyframes scaleButton{
@@ -76,7 +89,8 @@
       min-width: 60hv;
   
       h1{
-        font-size: 34px;
+        margin-top: -200px;
+        font-size: 64px;
         padding:0 14px;
         width: 100%;
       }
@@ -84,17 +98,47 @@
       p{
         font-size: 14px;
       }
+
+      span{
+        margin-top: -10px;
+        font-size: 34px;
+      }
+      
     }
   }
   
   @media screen and (max-width: 480px) {
+    .hero{
+      margin-top: -20px;
+    }
     .hero h1 {
-      font-size: 24px;
+      font-size: 80px;
+    }
+
+    .hero span{
+      margin-top: -60px;
+      font-size: 34px;
     }
   }
-  /// 
+
+  @media screen and (max-width: 380px){
+
+  .hero{
+    margin-top: -60px;
+  }
+  .hero h1 {
+    margin-top: 20px;
+    font-size: 80px;
+  }
+
+  .hero span{
+    font-size: 24px;
+  }
+}
+
+
   .about {
-    background-color: $primary-normal;
+    background-color: #14213d;
     overflow: hidden;
     color: $white-normal;
   }
@@ -108,6 +152,7 @@
   
     img{
   max-width: 570px;
+  border-radius: 20px;
     }
   }
   
@@ -122,8 +167,13 @@
     }
   
     p{
+      font-weight: 800;
       margin-bottom: 14px;
       line-height: 150%;
+    }
+    
+    span{
+      color: #dfb656;
     }
   }
   
@@ -138,8 +188,8 @@
   // Services
 
 .services {
-  background-color: $white-normal;
-  color: $black-normal;
+  background-color: #aaa9a9;
+  color: rgb(7,28,59);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -151,6 +201,7 @@
   text-transform: uppercase;
   text-align: center;
   font-size: 38px;
+  font-weight: 800;
   margin-bottom: 14px;
 }
 
@@ -158,23 +209,29 @@
   line-height: 150%;
   margin-bottom: 14px;
   text-align: center;
+  font-weight: 800;
   max-width: 780px;
 }
 
+
 .haircuts {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
   padding: 0 44px 34px 44px;
 }
 
 .haircut {
-  flex:1;
+  flex: -1;
+  // max-width: calc(33.333% - 16px);
+  // margin-bottom: 16px;
   display: flex;
   flex-direction: column;
+  border: 4px solid rgb(223,182,86);;;
   background-color: $white-normal;
   border-radius: 8px;
-  box-shadow: 0px -1px 17x -4px rgba(0,0,0, 0.45);
+  box-shadow: 5px -1px 0px 5px rgb(7, 28, 59);
 
   overflow: hidden;
 
@@ -195,17 +252,21 @@
   display: flex;
   justify-content: space-between;
   padding: 14px;
-  background-color: $white-normal;
+  background-color: #E6E6E6;
   z-index: 99;
 }
 
 .haircut-info button{
   color: $white-normal;
-  background-color: $red-normal;
+  background-color: rgb(7,28,59);
   padding: 4px 8px;
   border-radius: 4px;
-  border:0;
-  cursor: default;
+  border: 2px solid rgb(223,182,86);;
+  cursor: pointer;
+}
+
+.haircut-info a{
+  color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -232,6 +293,10 @@
   color: $white-normal;
 }
 
+.footer img{
+  max-width: 84px;
+}
+
 .footer-icons {
   display: flex;
   gap: 8px;
@@ -241,6 +306,22 @@
 .texto-footer{
   // margin-left: 12px;
   text-align: center;
+  text-decoration: none;
+}
+
+.texto-footer span{
+  color: #dfb656;
+}
+
+.texto-footer button{
+  background-color: #14213d;
+  color: white;
+  padding: 5px;
+  margin: auto;
+}
+
+.texto-footer a{
+  color: white;
 }
 
 //-----------//

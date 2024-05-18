@@ -10,7 +10,7 @@
 @import "partials/layout";
 
 body{
-    font-family: 'Sora', sans-serif;
+    font-family: 'Alexandria', sans-serif;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -18,8 +18,13 @@ body{
     background-color: $primary-normal;
 }
 
+p{
+    font-family: "Alexandria", sans-serif;
+    font-weight: 500;
+}
+
 button {
-    font-family: 'Sora', sans-serif;
+    font-family: 'Alexandria', sans-serif;
     cursor: pointer;
 }
 
