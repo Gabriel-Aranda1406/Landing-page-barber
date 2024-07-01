@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -379,7 +378,7 @@ i {
   position: fixed;
   bottom: 14px;
   right: 24px;
-  z-index: 99999;
+  z-index: 99;
 }
 .btn-whatsapp img {
   max-width: 74px;
@@ -388,12 +387,13 @@ i {
 .btn-whatsapp img:hover {
   transform: scale(1.1);
 }
+
 .btn-whatsapp .tooltip-text {
   visibility: hidden;
   position: absolute;
   width: 120px;
-  top: -40px; /* Mudança na posição para garantir que o tooltip não saia da tela */
-  left: -10px; /* Ajuste conforme necessário */
+  top: 8px;
+  left: -144px;
   padding: 6px;
   border-radius: 8px;
   text-align: center;
@@ -402,6 +402,7 @@ i {
   opacity: 0;
   transition: opacity 0.4s;
 }
+
 .btn-whatsapp:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
@@ -409,11 +410,7 @@ i {
 
 @media screen and (max-width: 768px) {
   .btn-whatsapp {
-    right: 14px; /* Ajuste do posicionamento para telas menores */
-    bottom: 14px;
-  }
-  .btn-whatsapp img {
-    max-width: 64px;
+    display: none;
   }
 }
 body {
