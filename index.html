@@ -209,12 +209,34 @@
   
   <!--Button WhatsApp-->
   
-  <a 
+  <!-- <a 
   href="https://api.whatsapp.com/send?phone=5511959267438&text=Quero%20fazer%20um%20agendamento!" class="btn-whatsapp" 
   target="_blank">
     <img src="assets/whatssapp.svg" alt="Botão WhatsApp" />
     <span class="tooltip-text"> Agende seu horário </span>
+  </a> -->
+
+  <a href="https://api.whatsapp.com/send?phone=5511959267438&text=Quero%20fazer%20um%20agendamento!" class="btn-whatsapp" target="_blank" data-aos="zoom-in-up" data-aos-delay="400" style="position: fixed; bottom: 14px; right: 24px; z-index: 9999;">
+    <img src="assets/whatssapp.svg" alt="Botão WhatsApp" style="max-width: 74px; transition: transform 0.4s;">
+    <span class="tooltip-text" style="visibility: hidden; position: absolute; width: 120px; top: -40px; left: -10px; padding: 6px; border-radius: 8px; text-align: center; background-color: black; color: white; opacity: 0; transition: opacity 0.4s;">Agende seu horário</span>
   </a>
+
+  <script>
+    document.querySelector('.btn-whatsapp img').addEventListener('mouseover', function() {
+      this.style.transform = 'scale(1.1)';
+    });
+    document.querySelector('.btn-whatsapp img').addEventListener('mouseout', function() {
+      this.style.transform = 'scale(1)';
+    });
+    document.querySelector('.btn-whatsapp').addEventListener('mouseover', function() {
+      document.querySelector('.tooltip-text').style.visibility = 'visible';
+      document.querySelector('.tooltip-text').style.opacity = '1';
+    });
+    document.querySelector('.btn-whatsapp').addEventListener('mouseout', function() {
+      document.querySelector('.tooltip-text').style.visibility = 'hidden';
+      document.querySelector('.tooltip-text').style.opacity = '0';
+    });
+  </script>
   
   <script src="script.js"></script>
   </body>
