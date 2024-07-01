@@ -413,6 +413,10 @@ i {
     display: none;
   }
 }
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Alexandria", sans-serif;
   width: 100%;
