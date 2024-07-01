@@ -379,7 +379,7 @@ i {
   position: fixed;
   bottom: 14px;
   right: 24px;
-  z-index: 99;
+  z-index: 99999;
 }
 .btn-whatsapp img {
   max-width: 74px;
