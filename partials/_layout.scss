@@ -330,48 +330,95 @@
 
 //Botão WhatsApp
 
+// .btn-whatsapp {
+//   position: fixed;
+//   bottom: 14px;
+//   right: 24px;
+//   z-index: 99;
+
+
+//   img{
+//     max-width: 74px;
+//     transition: transform 0.4s;
+//   }
+
+//   img:hover {
+//     transform: scale(1.1);
+//   }
+  
+// }
+
+// .btn-whatsapp .tooltip-text {
+//   visibility: hidden;
+//   position: absolute;
+//   width: 120px;
+//   top: 8px;
+//   left: -144px;
+//   padding: 6px;
+//   border-radius: 8px;
+//   text-align: center;
+//   background-color: $black-normal;
+//   color: $white-normal;
+//   opacity: 0;
+//   transition: opacity 0.4s;
+
+// }
+
+// .btn-whatsapp:hover .tooltip-text {
+//   visibility: visible;
+//   opacity: 1;
+// }
+
+// @media screen and (max-width: 768px) {
+//   .btn-whatsapp {
+//     img{
+//       max-width: 64px;
+//     }
+//   }
+// }
+
 .btn-whatsapp {
   position: fixed;
   bottom: 14px;
   right: 24px;
   z-index: 99;
-
-
-  img{
+  
+  img {
     max-width: 74px;
     transition: transform 0.4s;
   }
-
+  
   img:hover {
     transform: scale(1.1);
   }
   
-}
+  .tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: -40px; /* Mudança na posição para garantir que o tooltip não saia da tela */
+    left: -10px; /* Ajuste conforme necessário */
+    padding: 6px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: $black-normal;
+    color: $white-normal;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
 
-.btn-whatsapp .tooltip-text {
-  visibility: hidden;
-  position: absolute;
-  width: 120px;
-  top: 8px;
-  left: -144px;
-  padding: 6px;
-  border-radius: 8px;
-  text-align: center;
-  background-color: $black-normal;
-  color: $white-normal;
-  opacity: 0;
-  transition: opacity 0.4s;
-
-}
-
-.btn-whatsapp:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
+  &:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .btn-whatsapp {
-    img{
+    right: 14px; /* Ajuste do posicionamento para telas menores */
+    bottom: 14px;
+
+    img {
       max-width: 64px;
     }
   }
